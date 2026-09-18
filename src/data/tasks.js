@@ -27,7 +27,7 @@ const tasks = [
       id: 5,
       title: "Practice JavaScript",
       category: "JavaScript",
-      completed: false
+      completed: true
     }
   ];
   
