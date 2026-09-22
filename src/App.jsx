@@ -1,88 +1,128 @@
 import tasks from "./data/tasks";
 
+function App() {
+    // Object 
+    const student = {name: "Rahul",age: 22,course: "React", status: "Pending"};
 
-// const tasks = [
-//     {
-//       id: 1,
-//       title: "Learn React",
-//       category: "React",
-//       completed: true
-//     },
-//     {
-//       id: 2,
-//       title: "Learn TypeScript",
-//       category: "TypeScript",
-//       completed: false
-//     },
-//     {
-//       id: 3,
-//       title: "Learn Redux",
-//       category: "Redux",
-//       completed: false
-//     },
-//     {
-//       id: 4,
-//       title: "Build Todo App",
-//       category: "JavaScript",
-//       completed: true
-//     },
-//     {
-//       id: 5,
-//       title: "Practice JavaScript",
-//       category: "JavaScript",
-//       completed: false
-//     }
-// ];
+    // Array 
+    const courses = ["React","TypeScript","Redux"];
+    
+    // Get first task from tasks array
+    const eachTask = tasks[0];
+    const task = student;
 
-const completedTask = tasks
-    .filter(task => task.completed)
-    .map(task => task.title);
+    const firstCourse = courses[0];
+    const thirdCourse = courses[2];
 
+    const {id, title, status, priority} = eachTask;
+    const {name, course} = task;
 
+    const updateCourses = [...courses, "html"];
+    
+    const studentInfo = {...student, status: "completed"};
 
-const completedCount = tasks.reduce((count, task) => {
-    if (task.completed) {
-        return count + 1
-    }
+    
 
-    return count;
-}, 0);
+    return(
+        <div>
+            <h5>Array Destructuring</h5>
+            <h6>Name : {firstCourse}</h6>
+            <p>Course : {thirdCourse}</p>
+            <hr />
 
+            <h5>Object Destructuring</h5>
+            <h6>{title}</h6>
+            <p>ID : {id}</p>
+            <p>Status : {status}</p>
+            <p>Priority : {priority}</p>
+            <hr />
 
-function Caa() {
-    const completedTask = tasks.filter(task => task.completed);
-    const findTask = tasks.find(task => task.id === 3 );
-    const completeCount = tasks.reduce((count, task) => {
-        if (task.completed) {
-            return count + 1
-        }
+            <h6>Name : {name}</h6>
+            <p>Course : {course}</p>
+            <hr />
 
-        return count;
-    }, 0)
+            <h5>Spread operators</h5>
+            {updateCourses.map(course => (
+                <p key={course}>Course : {course}</p>
+            ))}
 
-    return (
-      <div>
-        <h1>Task Management App</h1>
+            <hr />
 
-        <h6>Find</h6>
-        <p>Category: {findTask.completed ? "Completed" : "Pending"}</p>
+            <h2>Object Spread Operator</h2>
 
-        <h6>Completed Tasks</h6>
-        {completedTask.map(task => (
-            <div key={task.id}>
-                <p>{task.title}</p>
-                {/* <p>{completedTask}</p> */}
-            </div>
-        ))}
+            <h4>Original Task</h4>
+            <p>Name: {student.name}</p>
+            <p>Age: {student.age}</p>
+            <p>Course: {student.course}</p>
+            <p>Status: {student.status}</p>
 
-        <h6>Complete count</h6>
-        <p>{completeCount}</p>
-        
-      </div>
+            <h4>Updated Task</h4>
+            <p>Name: {studentInfo.name}</p>
+            <p>Age: {studentInfo.age}</p>
+            <p>Course: {studentInfo.course}</p>
+            <p>Status: {studentInfo.status}</p>
+
+        </div>
     );
-  }
+}
+
+export default App;
+
+
+// const completedTask = tasks
+//     .filter(task => task.completed)
+//     .map(task => task.title);
+
+
+
+// const completedCount = tasks.reduce((count, task) => {
+//     if (task.completed) {
+//         return count + 1
+//     }
+
+//     return count;
+// }, 0);
+
+
+// function Caa({id, title}) {
+//     const completedTask = tasks.filter(task => task.completed);
+//     const findTask = tasks.find(task => task.id === 3 );
+//     const completeCount = tasks.reduce((count, task) => {
+//         if (task.completed) {
+//             return count + 1
+//         }
+
+//         return count;
+//     }, 0)
+
+//     return (
+//       <div>
+//         <h1>Task Management App</h1>
+
+//         <h6>Find</h6>
+//         <p>Category: {findTask.completed ? "Completed" : "Pending"}</p>
+
+//         <h6>Completed Tasks</h6>
+//         {completedTask.map(task => (
+//             <div key={task.id}>
+//                 <p>{task.title}</p>
+//                 {/* <p>{completedTask}</p> */}
+//             </div>
+//         ))}
+
+//         <h6>Complete count</h6>
+//         <p>{completeCount}</p>
+
+//         <div>
+//             <p>{id}</p>
+//             <h3>{title}</h3>
+//         </div>
+        
+//       </div>
+//     );
+//   }
   
-export default Caa;
+// export default Caa;
 
 // function App() {
 //     return(
