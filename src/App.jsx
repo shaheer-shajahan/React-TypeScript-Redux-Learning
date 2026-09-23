@@ -3,25 +3,34 @@ import tasks from "./data/tasks";
 function App() {
     // Object 
     const student = {name: "Rahul",age: 22,course: "React", status: "Pending"};
+    // const newTask = {id: 4, title: "Learn JavaScript", status: "pending", priority: "medium"};
 
     // Array 
     const courses = ["React","TypeScript","Redux"];
     
     // Get first task from tasks array
     const eachTask = tasks[0];
+
+    // Since student is an OBJECT, don't use student[0]
     const task = student;
 
+    // Array destructuring
     const firstCourse = courses[0];
     const thirdCourse = courses[2];
 
+    // Object destructuring
     const {id, title, status, priority} = eachTask;
     const {name, course} = task;
 
+    // Array Spread
     const updateCourses = [...courses, "html"];
     
+    // Object Spread
     const studentInfo = {...student, status: "completed"};
+    // const studentInfo = {...tasks, newTask};
 
-    
+    // Object Rest
+    const {name: studentName, ...remainingInfo} = student;
 
     return(
         <div>
@@ -45,11 +54,9 @@ function App() {
             {updateCourses.map(course => (
                 <p key={course}>Course : {course}</p>
             ))}
-
             <hr />
 
             <h2>Object Spread Operator</h2>
-
             <h4>Original Task</h4>
             <p>Name: {student.name}</p>
             <p>Age: {student.age}</p>
@@ -61,6 +68,18 @@ function App() {
             <p>Age: {studentInfo.age}</p>
             <p>Course: {studentInfo.course}</p>
             <p>Status: {studentInfo.status}</p>
+
+            {/* {studentInfo.map(studentInfoEach => (
+                <p key={studentInfoEach}>{studentInfoEach}</p>
+            ))} */}
+
+            <hr />
+
+            <h2>Object Rest Operator</h2>
+            <p>Student Name: {studentName}</p>
+            <p>Age : {remainingInfo.age}</p>
+            <p>Course : {remainingInfo.course}</p>
+            <p>Status : {remainingInfo.status}</p>
 
         </div>
     );
