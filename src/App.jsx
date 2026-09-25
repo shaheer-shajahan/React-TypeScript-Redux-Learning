@@ -27,7 +27,6 @@ function App() {
     
     // Object Spread
     const studentInfo = {...student, status: "completed"};
-    // const studentInfo = {...tasks, newTask};
 
     // Object Rest
     const {name: studentName, ...remainingInfo} = student;
@@ -68,10 +67,6 @@ function App() {
             <p>Age: {studentInfo.age}</p>
             <p>Course: {studentInfo.course}</p>
             <p>Status: {studentInfo.status}</p>
-
-            {/* {studentInfo.map(studentInfoEach => (
-                <p key={studentInfoEach}>{studentInfoEach}</p>
-            ))} */}
 
             <hr />
 
