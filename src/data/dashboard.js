@@ -1,19 +1,23 @@
 const dashboardStats = [
     {
       title: "Students",
-      value: 120
+      value: 1250,
+      icon: "bi bi-people"
     },
     {
       title: "Courses",
-      value: 24
+      value: 48,
+      icon: "bi bi-book"
     },
     {
-      title: "Tasks",
-      value: 18
+      title: "Attendance",
+      value: 92,
+      icon: "bi bi-calendar-check"
     },
     {
-      title: "Users",
-      value: 350
+      title: "Revenue",
+      value: 240000,
+      icon: "bi bi-currency-rupee"
     }
 ];
 

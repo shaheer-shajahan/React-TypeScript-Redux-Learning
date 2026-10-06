@@ -11,20 +11,17 @@ function Sidebar() {
             {/* <!-- Mobile Sidebar Header --> */}
             <div className="offcanvas-header border-bottom">
 
-                <h5 className="offcanvas-title" id="sidebarLabel">
-                Navigation
-                </h5>
+                <h5 className="offcanvas-title" id="sidebarLabel">Navigation</h5>
 
                 <button
-                type="button"
-                className="btn-close d-lg-none"
-                data-bs-dismiss="offcanvas"
-                data-bs-target="#sidebar"
-                aria-label="Close"
-                ></button>
+                    type="button"
+                    className="btn-close d-lg-none"
+                    data-bs-dismiss="offcanvas"
+                    data-bs-target="#sidebar"
+                    aria-label="Close">
+                </button>
 
             </div>
-
 
             {/* <!-- Sidebar Content --> */}
             <div className="offcanvas-body d-flex flex-column p-3">
@@ -38,50 +35,27 @@ function Sidebar() {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                 >
-
                     <span className="d-flex align-items-center gap-2">
-
-                    <span
-                        className="rounded bg-primary text-white d-flex align-items-center justify-content-center"
-                        // style="width: 32px; height: 32px;"
-                    >
-                        CD
-                    </span>
-
-                    <span className="text-start">
-                        <span className="d-block fw-semibold">
-                        Company Dashboard
+                        <span className="rounded bg-primary text-white d-flex align-items-center justify-content-center" // style="width: 32px; height: 32px;"
+                        >CD</span>
+                        <span className="text-start">
+                            <span className="d-block fw-semibold"> Company Dashboard</span>
+                            <small className="text-body-secondary">Workspace</small>
                         </span>
-
-                        <small className="text-body-secondary">
-                        Workspace
-                        </small>
                     </span>
-
-                    </span>
-
                     <i className="bi bi-chevron-down"></i>
-
                 </button>
 
                 <ul className="dropdown-menu w-100">
-                    <li>
-                    <a className="dropdown-item" href="#">
-                        Workspace 1
-                    </a>
-                    </li>
-                    <li>
-                    <a className="dropdown-item" href="#">
-                        Workspace 2
-                    </a>
-                    </li>
+                    <li><a className="dropdown-item" href="#">Workspace 1</a></li>
+                    <li><a className="dropdown-item" href="#">Workspace 2</a></li>
                 </ul>
 
-                </div>
+            </div>
 
 
                 {/* <!-- Main Navigation --> */}
-                <nav className="nav nav-pills flex-column gap-1">
+            <nav className="nav nav-pills flex-column gap-1">
 
                 {/* <!-- Dashboard --> */}
                 <a
