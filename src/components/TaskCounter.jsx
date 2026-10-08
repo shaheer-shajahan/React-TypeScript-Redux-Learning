@@ -10,6 +10,17 @@ function TaskCounter() {
                     <div className="card-header bg-transparent d-flex justify-content-between align-items-center">
                         <h5 className="mb-0">Task Counter</h5>
                         <div className="ms-auto d-flex gap-3">
+                        {/* <button
+    className="btn btn-success"
+    onClick={() => {
+        setCount(prev => prev + 1);
+        setCount(prev => prev + 1);
+        setCount(prev => prev + 1);
+    }}
+>
+    Add 3 Tasks
+</button> */}
+
                             <button className="btn btn-danger d-flex gap-2"
                                 onClick={()=> {
                                     if (count>0) {
