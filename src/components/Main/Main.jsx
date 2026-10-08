@@ -1,8 +1,12 @@
 import UserCard from '../Card';
 import dashboardStats from '../../data/dashboard';
+import TaskCounter from '../TaskCounter';
 
 function Main() {
+    
     return (
+
+
         <main className="flex-grow-1">
 
             <div className="container-fluid p-4">
@@ -25,6 +29,8 @@ function Main() {
                         </button>
                     </div>
                 </div>
+
+                <TaskCounter />
 
                 {/* <!-- Dashboard Cards --> */}
                 <div className="row g-3 mb-4">
