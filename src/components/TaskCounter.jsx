@@ -22,7 +22,7 @@ function TaskCounter() {
                             <button className="btn btn-primary d-flex gap-2"
                                 onClick={()=> {
                                     if (count < 5) {
-                                        setCount(count + 1);
+                                        setCount(prev => prev + 1);
                                     }
                                 }}
                                 >
