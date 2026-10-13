@@ -1,6 +1,7 @@
 import UserCard from '../Card';
 import dashboardStats from '../../data/dashboard';
 import TaskCounter from '../TaskCounter';
+import TaskManager from '../TaskManager';
 
 function Main() {
     
@@ -31,6 +32,7 @@ function Main() {
                 </div>
 
                 <TaskCounter />
+                <TaskManager />
 
                 {/* <!-- Dashboard Cards --> */}
                 <div className="row g-3 mb-4">

@@ -50,17 +50,17 @@ function TaskCounter() {
                         
                     </div>
                     <div className="card-body d-flex justify-content-between">
-                        <h5>{count} Tasks</h5>
+                        <h5 className="mb-0">{count} Tasks</h5>
                         {count === 0 && (
-                            <p>No Task</p>
+                            <p className="badge text-bg-secondary">No Task</p>
                         )}
 
                         {count > 0 && count < 5 && (
-                            <p>Tasks in progress</p>
+                            <p className="badge text-bg-info">Tasks in progress</p>
                         )}
                         
                         {count === 5 && (
-                            <p>Task Completed</p>
+                            <p className="badge text-bg-success">Task Completed</p>
                         )}
                     </div>
                 </div>
