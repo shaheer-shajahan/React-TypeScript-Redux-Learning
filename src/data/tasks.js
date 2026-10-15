@@ -17,9 +17,9 @@ const tasks = [
       status: "pending",
       priority: "high"
     }
-  ];
+];
   
-  export default tasks;
+export default tasks;
 
 // const tasks = [
 //     {

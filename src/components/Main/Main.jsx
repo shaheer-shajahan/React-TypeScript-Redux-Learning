@@ -2,6 +2,7 @@ import UserCard from '../Card';
 import dashboardStats from '../../data/dashboard';
 import TaskCounter from '../TaskCounter';
 import TaskManager from '../TaskManager';
+import ProductCatalog from '../ProductCatalog';
 
 function Main() {
     
@@ -31,6 +32,7 @@ function Main() {
                     </div>
                 </div>
 
+                <ProductCatalog />
                 <TaskCounter />
                 <TaskManager />
 
