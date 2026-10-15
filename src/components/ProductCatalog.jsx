@@ -37,6 +37,7 @@ function ProductCatalog() {
     if(loading) {
         return (
             <p>Product Loading...</p>
+            
         )
     }
 
