@@ -1,16 +1,17 @@
-import UserCard from '../Card';
 import dashboardStats from '../../data/dashboard';
 import TaskCounter from '../TaskCounter';
 import TaskManager from '../TaskManager';
 import ProductCatalog from '../ProductCatalog';
+import UserCard from '../Card';
+
+import { useState } from 'react';
 
 function Main() {
+
+    const [tasks, setTasks] = useState(dashboardStats);
     
-    return (
-
-
+    return (      
         <main className="flex-grow-1">
-
             <div className="container-fluid p-4">
                 {/* <!-- Page Header --> */}
                 <div className="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
@@ -32,30 +33,21 @@ function Main() {
                     </div>
                 </div>
 
+                <UserCard tasks={tasks} />
+                
                 <ProductCatalog />
                 <TaskCounter />
                 <TaskManager />
 
                 {/* <!-- Dashboard Cards --> */}
-                <div className="row g-3 mb-4">
+                {/* <div className="row g-3 mb-4">
                     {dashboardStats.map((item) => (
                         <div className="col-12 col-sm-6 col-xl-3">
                             <UserCard title={item.title} value={item.value} icon={item.icon} />
                         </div>
                     ))}
-                    {/* <div className="col-12 col-sm-6 col-xl-3">
-                        <UserCard title="Students" value="1,250" icon="bi bi-people" />
-                    </div>
-                    <div className="col-12 col-sm-6 col-xl-3">
-                        <UserCard title="Courses" value="48" icon="bi bi-book" />
-                    </div>
-                    <div className="col-12 col-sm-6 col-xl-3">
-                        <UserCard title="Attendance" value="92%" icon="bi bi-calendar-check" />
-                    </div>
-                    <div className="col-12 col-sm-6 col-xl-3">
-                        <UserCard title="Revenue" value="₹2.4L" icon="bi bi-currency-rupee" />
-                    </div> */}
-                </div>
+                </div> */}
+
 
                 {/* <!-- Dashboard Content --> */}
                 <div className="row g-3">

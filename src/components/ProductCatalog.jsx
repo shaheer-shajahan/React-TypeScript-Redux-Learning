@@ -37,7 +37,7 @@ function ProductCatalog() {
     if(loading) {
         return (
             <p>Product Loading...</p>
-            
+
         )
     }
 
@@ -56,7 +56,7 @@ function ProductCatalog() {
     }
 
     return(
-        <div className="conatainer-fluid">
+        <div className="conatainer-fluid mb-3">
             <h3>Product List</h3>
             <div className="row">
                 {products.length === 0 ? (
