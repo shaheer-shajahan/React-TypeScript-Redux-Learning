@@ -61,7 +61,6 @@ function TaskManager() {
         // </div>
 
         <div className="container">
-            <h2>Task list</h2>
             <TaskList tasks={tasks} />
         </div>
     )

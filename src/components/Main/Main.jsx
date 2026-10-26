@@ -4,6 +4,10 @@ import TaskManager from '../TaskManager';
 import ProductCatalog from '../ProductCatalog';
 import UserCard from '../Card';
 
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Users from '../../pages/Users';
+import UserDetails from "../../pages/UserDetails";
+
 import { useState } from 'react';
 
 function Main() {
@@ -32,6 +36,16 @@ function Main() {
                         </button>
                     </div>
                 </div>
+
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element="{<Navigate path='/users' replace />}"  />
+
+                        <Route path='/users' element={<Users />} />
+                        <Route path='/users/:id' element={<UserDetails />} />
+                    </Routes>
+                </BrowserRouter>
+                
 
                 <UserCard tasks={tasks} />
                 
